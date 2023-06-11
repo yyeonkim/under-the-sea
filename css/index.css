@@ -12,6 +12,10 @@ body {
   font-size: 1.6rem;
 }
 
+button {
+  cursor: pointer;
+}
+
 .normal {
   font-weight: 400;
 }
