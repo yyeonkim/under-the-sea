@@ -3,17 +3,13 @@
 }
 
 html {
+  font-family: "NanumSquare", sans-serif;
   color: white;
   font-size: 10px;
 }
 
 body {
-  font-family: "NanumSquare", sans-serif;
   font-size: 1.6rem;
-}
-
-button {
-  cursor: pointer;
 }
 
 .normal {
@@ -27,6 +23,18 @@ button {
 }
 .light {
   font-weight: 300;
+}
+
+input {
+  font-family: "NanumSquare", sans-serif;
+}
+
+input::placeholder {
+  font-weight: 300;
+}
+
+button {
+  cursor: pointer;
 }
 
 h1 {
