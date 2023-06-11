@@ -16,13 +16,19 @@ body {
   line-height: 2;
 }
 
+.search form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
 .search input {
   background-color: transparent;
   border: 5px solid white;
   border-radius: 10rem;
   width: 64rem;
   height: 6.4rem;
-  padding-left: 2rem;
+  padding-left: 3rem;
   color: white;
 }
 
@@ -31,7 +37,9 @@ body {
   opacity: 0.8;
 }
 
-.search button i {
-  width: 3.6rem;
-  height: 3.6rem;
+.search button .icon {
+  position: absolute;
+  right: 3rem;
+  z-index: 10;
+  color: white;
 }
