@@ -6,17 +6,17 @@ body {
   align-items: center;
 }
 
-.content {
+.search {
   text-align: center;
   margin-top: 30rem;
 }
 
-.content p {
+.search p {
   margin: 2rem 0;
   line-height: 2;
 }
 
-.content input {
+.search input {
   background-color: transparent;
   border: 5px solid white;
   border-radius: 10rem;
@@ -26,12 +26,12 @@ body {
   color: white;
 }
 
-.content input::placeholder {
+.search input::placeholder {
   color: white;
   opacity: 0.8;
 }
 
-.content .search-button i {
+.search button i {
   width: 3.6rem;
   height: 3.6rem;
 }
