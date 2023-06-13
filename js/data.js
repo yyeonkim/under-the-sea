@@ -1,4 +1,4 @@
-export const resultList = [
+export const searchtList = [
   "고리",
   "일광",
   "대변",

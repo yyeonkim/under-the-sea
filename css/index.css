@@ -12,6 +12,10 @@ body {
   font-size: 1.6rem;
 }
 
+.none {
+  display: none;
+}
+
 .normal {
   font-weight: 400;
 }
