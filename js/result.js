@@ -1,9 +1,12 @@
 import { searchtList } from "./data.js";
 import { hide, show } from "./util.js";
 
+const searchPage = document.getElementById("js-search");
+const resultPage = document.getElementById("js-result");
 const form = document.getElementById("js-resultForm");
 const input = document.getElementById("js-resultInput");
 const message = document.querySelector(".js-resultMessage");
+const chevron = document.getElementById("js-chevron");
 
 const onSubmit = (event) => {
   event.preventDefault();
@@ -23,4 +26,10 @@ const onSubmit = (event) => {
   }
 };
 
+const onClick = () => {
+  resultPage.style.display = "none";
+  searchPage.style.display = "block";
+};
+
 form.addEventListener("submit", onSubmit);
+chevron.addEventListener("click", onClick);
