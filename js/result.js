@@ -1,4 +1,5 @@
 import { searchtList } from "./data.js";
+import { hide, show } from "./util.js";
 
 const form = document.getElementById("js-resultForm");
 const input = document.getElementById("js-resultInput");
@@ -13,11 +14,9 @@ const onSubmit = (event) => {
     const index = searchtList.indexOf(value);
     // 검색 결과가 없으면 메시지 표시
     if (index === -1) {
-      message.classList.remove("none");
+      show(message);
     } else {
-      if (!message.classList.contains("none")) {
-        message.classList.add("none");
-      }
+      hide(message);
       input.value = ""; // 검색어 초기화
       // 검색 결과 가져오기
     }

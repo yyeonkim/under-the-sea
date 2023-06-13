@@ -1,5 +1,6 @@
 import { fetchData } from "./api.js";
 import { searchtList } from "./data.js";
+import { hide, show } from "./util.js";
 
 const searchPage = document.getElementById("js-search");
 const form = document.getElementById("js-searchForm");
@@ -39,16 +40,6 @@ const onSubmit = (event) => {
         resultPage.style.display = "flex";
       }
     }
-  }
-};
-
-const show = (element) => {
-  element.classList.remove("none");
-};
-
-const hide = (element) => {
-  if (!element.classList.contains("none")) {
-    element.classList.add("none");
   }
 };
 
