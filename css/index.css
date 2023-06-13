@@ -40,6 +40,7 @@ h1 {
 
 .icon {
   color: white;
+  cursor: pointer;
 }
 
 .icon__search {
