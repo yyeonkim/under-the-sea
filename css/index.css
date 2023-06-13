@@ -10,6 +10,11 @@ html {
 
 body {
   font-size: 1.6rem;
+  background-color: #3559d9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .none {
@@ -35,4 +40,13 @@ h1 {
 
 .icon {
   color: white;
+}
+
+.icon__search {
+  position: absolute;
+  z-index: 10;
+}
+
+.icon__chevron {
+  opacity: 0.8;
 }
