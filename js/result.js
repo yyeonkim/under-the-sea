@@ -1,8 +1,8 @@
 import { searchtList } from "./data.js";
 
-const form = document.getElementById("js-searchForm");
-const input = document.getElementById("js-searchInput");
-const message = document.querySelector(".js-searchMessage");
+const form = document.getElementById("js-resultForm");
+const input = document.getElementById("js-resultInput");
+const message = document.querySelector(".js-resultMessage");
 
 const onSubmit = (event) => {
   event.preventDefault();

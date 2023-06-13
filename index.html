@@ -43,17 +43,22 @@
           <i class="fa-solid fa-magnifying-glass icon icon__search fa-xl"></i>
         </button>
       </form>
-      <p class="message none">검색 결과가 없습니다.</p>
+      <p class="message none js-searchMessage">검색 결과가 없습니다.</p>
     </div>
 
     <!-- 결과 화면 -->
     <div class="result">
-      <form action="">
-        <input type="text" placeholder="검색어를 입력하세요" />
+      <form action="" id="js-resultForm">
+        <input
+          id="js-resultInput"
+          type="text"
+          placeholder="검색어를 입력하세요"
+        />
         <button>
           <i class="fa-solid fa-magnifying-glass icon icon__search fa-lg"></i>
         </button>
       </form>
+      <span class="message none js-resultMessage">*검색 결과가 없습니다.</span>
       <div class="title">
         <i class="fa-solid fa-chevron-left icon icon__chevron fa-2xl"></i>
         <h1>해운대</h1>
@@ -76,5 +81,6 @@
 
     <!-- JS -->
     <script type="module" src="js/search.js"></script>
+    <script type="module" src="js/result.js"></script>
   </body>
 </html>
