@@ -22,7 +22,8 @@
     ></script>
   </head>
   <body>
-    <div class="search">
+    <!-- 검색 화면 -->
+    <div class="search none">
       <h1>부산광역시 해양 정보</h1>
       <p>
         부산 바다의 수질지수, 수온, 염분 정보를 제공합니다. 원하시는 지점의
@@ -37,10 +38,38 @@
           placeholder="검색어를 입력하세요 (예시: 부산대교, 해운대)"
         />
         <button>
-          <i class="fa-solid fa-magnifying-glass icon fa-xl"></i>
+          <i class="fa-solid fa-magnifying-glass icon icon__search fa-xl"></i>
         </button>
       </form>
       <p class="message none">검색 결과가 없습니다.</p>
+    </div>
+
+    <!-- 결과 화면 -->
+    <div class="result">
+      <form action="">
+        <input type="text" placeholder="검색어를 입력하세요" />
+        <button>
+          <i class="fa-solid fa-magnifying-glass icon icon__search fa-xl"></i>
+        </button>
+      </form>
+      <div class="title">
+        <i class="fa-solid fa-chevron-left icon"></i>
+        <h1>해운대</h1>
+      </div>
+      <div class="info">
+        <div class="info__item">
+          <h2>수질지수</h2>
+          <span>26</span>
+        </div>
+        <div class="info__item">
+          <h2>수질지수</h2>
+          <span>26</span>
+        </div>
+        <div class="info__item">
+          <h2>수질지수</h2>
+          <span>26</span>
+        </div>
+      </div>
     </div>
 
     <!-- JS -->
