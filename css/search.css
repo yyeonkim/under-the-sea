@@ -38,13 +38,12 @@ body {
   opacity: 0.8;
 }
 
-.search button .icon {
+.search .message {
+  margin-top: 4rem;
+}
+
+.icon__search {
   position: absolute;
   right: 3rem;
   z-index: 10;
-  color: white;
-}
-
-.search .message {
-  margin-top: 4rem;
 }

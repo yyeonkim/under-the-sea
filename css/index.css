@@ -16,19 +16,6 @@ body {
   display: none;
 }
 
-.normal {
-  font-weight: 400;
-}
-.bold {
-  font-weight: 700;
-}
-.bolder {
-  font-weight: 800;
-}
-.light {
-  font-weight: 300;
-}
-
 input {
   font-family: "NanumSquare", sans-serif;
 }
@@ -44,4 +31,8 @@ button {
 h1 {
   font-weight: 800;
   font-size: 6.4rem;
+}
+
+.icon {
+  color: white;
 }
