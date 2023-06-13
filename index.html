@@ -25,7 +25,7 @@
   </head>
   <body>
     <!-- 검색 화면 -->
-    <div class="search none">
+    <div id="js-search" class="search">
       <h1>부산광역시 해양 정보</h1>
       <p>
         부산 바다의 수질지수, 수온, 염분 정보를 제공합니다. 원하시는 지점의
@@ -43,11 +43,11 @@
           <i class="fa-solid fa-magnifying-glass icon icon__search fa-xl"></i>
         </button>
       </form>
-      <p class="message none js-searchMessage">검색 결과가 없습니다.</p>
+      <p id="js-searchMessage" class="message none">검색 결과가 없습니다.</p>
     </div>
 
     <!-- 결과 화면 -->
-    <div class="result">
+    <div id="js-result" class="result">
       <form action="" id="js-resultForm">
         <input
           id="js-resultInput"
@@ -58,23 +58,25 @@
           <i class="fa-solid fa-magnifying-glass icon icon__search fa-lg"></i>
         </button>
       </form>
-      <span class="message none js-resultMessage">*검색 결과가 없습니다.</span>
+      <span id="js-resultMessage" class="message none"
+        >*검색 결과가 없습니다.</span
+      >
       <div class="title">
         <i class="fa-solid fa-chevron-left icon icon__chevron fa-2xl"></i>
-        <h1>해운대</h1>
+        <h1 id="js-ocean">해운대</h1>
       </div>
       <div class="info">
         <div class="info__item">
           <h2>수질지수</h2>
-          <span>26</span>
+          <span id="js-quality">26</span>
         </div>
         <div class="info__item">
-          <h2>수질지수</h2>
-          <span>26</span>
+          <h2>수온</h2>
+          <span id="js-temperature">11℃</span>
         </div>
         <div class="info__item">
-          <h2>수질지수</h2>
-          <span>26</span>
+          <h2>염분</h2>
+          <span id="js-salt">35%</span>
         </div>
       </div>
     </div>
