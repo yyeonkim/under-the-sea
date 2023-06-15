@@ -1,6 +1,7 @@
+import { setStyle } from "./animation.js";
 import { fetchData } from "./api.js";
 import { searchtList } from "./data.js";
-import { hide, setData, setStyle, show } from "./util.js";
+import { hide, setData, show } from "./util.js";
 
 const searchPage = document.getElementById("js-search");
 const resultPage = document.getElementById("js-result");
