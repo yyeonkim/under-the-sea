@@ -41,6 +41,9 @@ export const setData = (data) => {
 };
 
 export const setStyle = (data) => {
+  // 스타일 초기화
+  resetStyle();
+
   const tempValue = Math.round(Number(data["수온"]));
   const saltValue = Math.round(Number(data["염분"]));
   // 배경 설정
@@ -94,7 +97,7 @@ export const setStyle = (data) => {
   });
   wave2.attributes[2].value = `rgb(${r2}, ${g2}, ${b2})`;
 
-  // 소금 추가
+  // 소금 개수
   const saltNum = mapNumRange({
     num: saltValue,
     fromMin: range.salt.min,
@@ -103,6 +106,7 @@ export const setStyle = (data) => {
     toMax: 30,
   });
 
+  // 소금 추가
   for (let i = 0; i < saltNum; i++) {
     const div = document.createElement("div");
     const size = getRandom(5, 12);
@@ -116,6 +120,12 @@ export const setStyle = (data) => {
     salts.insertAdjacentElement("afterbegin", div);
     salts.style.opacity = 1;
   }
+};
+
+const resetStyle = () => {
+  // 소금 없애기
+  salts.style.opacity = 0;
+  salts.innerHTML = "";
 };
 
 const mapNumRange = ({ num, fromMin, fromMax, toMin, toMax }) => {
