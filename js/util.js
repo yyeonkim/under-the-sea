@@ -1,6 +1,6 @@
 // 해양 수치와 파도 색 범위
 const range = {
-  temp: { min: 4, max: 18 },
+  temp: { min: 4, max: 13 },
   quality: { min: 20, max: 64 },
   salt: { min: 28, max: 35 },
   r1: { min: 0, max: 22 },
@@ -124,7 +124,6 @@ export const setStyle = (data) => {
 
 const resetStyle = () => {
   // 소금 없애기
-  salts.style.opacity = 0;
   salts.innerHTML = "";
 };
 
@@ -135,5 +134,5 @@ const mapNumRange = ({ num, fromMin, fromMax, toMin, toMax }) => {
 };
 
 const getRandom = (min, max) => {
-  return Math.floor(Math.random() * (max - min)) + min; //최댓값은 제외, 최솟값은 포함
+  return Math.floor(Math.random() * (max - min)) + min; // 최댓값은 제외, 최솟값은 포함
 };

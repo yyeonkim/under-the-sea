@@ -47,6 +47,48 @@ body {
   animation: float 2s ease-in-out 0s infinite;
 }
 
+.fish {
+  position: fixed;
+}
+
+.fish1 {
+  top: 40rem;
+  right: 10rem;
+  transform: scale(0.5);
+}
+
+.fish2 {
+  top: 30rem;
+  left: 20rem;
+}
+
+.fish2--small {
+  transform: scale(0.5);
+  top: 40rem;
+  left: 50rem;
+}
+
+.fish3--small {
+  transform: scale(0.5);
+  top: 40rem;
+  right: 50rem;
+}
+
+.fish3 {
+  top: 30rem;
+  right: 30rem;
+}
+
+.fish4 {
+  top: 50rem;
+  left: 10rem;
+}
+
+.turtle {
+  top: 60rem;
+  left: 10rem;
+}
+
 @keyframes wave {
   0% {
     transform: scale(var(--wave-scale), 1) translateX(var(--move));
