@@ -113,36 +113,33 @@ export const setStyle = (data) => {
   }
 
   // 해양 생물 애니메이션 추가
+  const easing = "cubic-bezier(0.13, 0.74, 0.9, 0.21)";
+  const moveLeft = "moveLeft";
+  const moveRight = "moveRight";
+
   if (qualityValue >= 20) {
     fish1.style.top = `${getRandom(range.top.min, range.top.max)}px`;
-    fish1.style.animation =
-      "moveLeft 12s cubic-bezier(0.13, 0.74, 0.9, 0.21) 2s infinite";
+    fish1.style.animation = `${moveLeft} 12s ${easing} 2s infinite`;
     smallFish2.style.top = `${getRandom(range.top.min, range.top.max)}px`;
-    smallFish2.style.animation =
-      "moveRight 10s cubic-bezier(0.13, 0.74, 0.9, 0.21) 2s infinite";
+    smallFish2.style.animation = `${moveRight} 10s ${easing} 2s infinite`;
   }
   if (qualityValue >= 25) {
     smallFish3.style.top = `${getRandom(range.top.min, range.top.max)}px`;
-    smallFish3.style.animation =
-      "moveLeft 11s cubic-bezier(0.13, 0.74, 0.9, 0.21) 2s infinite";
+    smallFish3.style.animation = `${moveLeft} 11s ${easing} 2s infinite`;
   }
   if (qualityValue >= 30) {
     fish2.style.top = `${getRandom(range.top.min, range.top.max)}px`;
-    fish2.style.animation =
-      "moveRight 12s cubic-bezier(0.13, 0.74, 0.9, 0.21) 2s infinite";
+    fish2.style.animation = `${moveRight} 12s ${easing} 2s infinite`;
     fish3.style.top = `${getRandom(range.top.min, range.top.max)}px`;
-    fish3.style.animation =
-      "moveLeft 13s cubic-bezier(0.13, 0.74, 0.9, 0.21) 2s infinite";
+    fish3.style.animation = `${moveLeft} 13s ${easing} 2s infinite`;
   }
   if (qualityValue >= 35) {
     fish4.style.top = `${getRandom(range.top.min, range.top.max)}px`;
-    fish4.style.animation =
-      "moveRight 15s cubic-bezier(0.13, 0.74, 0.9, 0.21) 3s infinite";
+    fish4.style.animation = `${moveRight} 15s ${easing} 3s infinite`;
   }
   if (qualityValue >= 40) {
     turtle.style.top = `${getRandom(range.top.min, range.top.max)}px`;
-    turtle.style.animation =
-      "moveRight 18s cubic-bezier(0.13, 0.74, 0.9, 0.21) 3s infinite";
+    turtle.style.animation = `${moveRight} 18s ${easing} 3s infinite`;
   }
 };
 
