@@ -1,6 +1,6 @@
 import { fetchData } from "./api.js";
 import { searchtList } from "./data.js";
-import { hide, show } from "./util.js";
+import { hide, setData, setStyle, show } from "./util.js";
 
 const searchPage = document.getElementById("js-search");
 const resultPage = document.getElementById("js-result");
@@ -31,10 +31,8 @@ const onSubmit = (event) => {
 
       if (response.message === "success") {
         const data = response.data;
-        ocean.textContent = data["조사정점"];
-        quality.textContent = data["수질지수"];
-        temperature.textContent = `${Math.round(Number(data["수온"]))}℃`;
-        salt.textContent = `${Math.round(Number(data["염분"]))}%`;
+        setData(data);
+        setStyle(data);
       }
     }
   }
