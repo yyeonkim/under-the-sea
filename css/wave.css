@@ -1,9 +1,36 @@
+:root {
+  --wave-width: 1440px;
+  --move: 360px;
+  --wave-scale: 4;
+}
+
 .wave1,
 .wave2 {
   position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
-  width: 100vw;
-  transform: scale(4, 1);
+  transform: scale(var(--wave-scale), 1) translateX(var(--move));
+}
+
+.wave1 {
+  animation: wave 10s ease-in-out 0s infinite;
+}
+
+.wave2 {
+  animation: wave 8s ease-in-out 0s infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(var(--wave-scale), 1) translateX(var(--move));
+  }
+
+  50% {
+    transform: scale(var(--wave-scale), 1) translateX(calc(-1 * var(--move)));
+  }
+
+  0% {
+    transform: scale(var(--wave-scale), 1) translateX(var(--move));
+  }
 }
