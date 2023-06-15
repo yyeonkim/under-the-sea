@@ -33,8 +33,8 @@ const onSubmit = (event) => {
         // 스타일 설정하기
         setStyle(data);
         // 화면 바꾸기 (검색 화면 --> 결과 화면)
-        searchPage.style.display = "none";
-        resultPage.style.display = "flex";
+        searchPage.style.animation = "fadeOut 0.5s ease-out forwards";
+        resultPage.style.animation = "fadeIn 0.5s ease-out 0.5s forwards";
       }
     }
   }

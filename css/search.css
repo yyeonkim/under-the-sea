@@ -1,6 +1,7 @@
 .search {
   text-align: center;
-  margin-top: 15%;
+  visibility: hidden;
+  animation: fadeIn 0.5s ease-out forwards;
 }
 
 .search p {

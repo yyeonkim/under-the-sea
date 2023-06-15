@@ -36,8 +36,8 @@ const onSubmit = (event) => {
 };
 
 const onClick = () => {
-  resultPage.style.display = "none";
-  searchPage.style.display = "block";
+  resultPage.style.animation = "fadeOut 0.5s ease-out forwards";
+  searchPage.style.animation = "fadeIn 0.5s ease-out 0.5s forwards";
 };
 
 form.addEventListener("submit", onSubmit);
