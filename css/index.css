@@ -10,7 +10,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  background-color: #3559d9;
+  background-color: rgb(116, 185, 236);
   display: flex;
   flex-direction: column;
   justify-content: center;
