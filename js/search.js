@@ -2,18 +2,11 @@ import { fetchData } from "./api.js";
 import { searchtList } from "./data.js";
 import { hide, setData, setStyle, show } from "./util.js";
 
-const body = document.querySelector("body");
 const searchPage = document.getElementById("js-search");
 const form = document.getElementById("js-searchForm");
 const input = document.getElementById("js-searchInput");
 const message = document.getElementById("js-searchMessage");
 const resultPage = document.getElementById("js-result");
-const ocean = document.getElementById("js-ocean");
-const quality = document.getElementById("js-quality");
-const temperature = document.getElementById("js-temperature");
-const salt = document.getElementById("js-salt");
-const wave1 = document.getElementById("js-wave1");
-const wave2 = document.getElementById("js-wave2");
 
 const onSubmit = (event) => {
   event.preventDefault();

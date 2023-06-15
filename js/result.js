@@ -8,10 +8,6 @@ const form = document.getElementById("js-resultForm");
 const input = document.getElementById("js-resultInput");
 const message = document.getElementById("js-resultMessage");
 const chevron = document.getElementById("js-chevron");
-const ocean = document.getElementById("js-ocean");
-const quality = document.getElementById("js-quality");
-const temperature = document.getElementById("js-temperature");
-const salt = document.getElementById("js-salt");
 
 const onSubmit = (event) => {
   event.preventDefault();
