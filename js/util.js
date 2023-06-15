@@ -11,6 +11,9 @@ const range = {
   b2: { min: 255, max: 230 },
 };
 
+const windowWidth = window.innerWidth;
+const windowHeight = window.innerHeight;
+
 const body = document.querySelector("body");
 const ocean = document.getElementById("js-ocean");
 const quality = document.getElementById("js-quality");
@@ -18,6 +21,7 @@ const temperature = document.getElementById("js-temperature");
 const salt = document.getElementById("js-salt");
 const wave1 = document.getElementById("js-wave1");
 const wave2 = document.getElementById("js-wave2");
+const salts = document.getElementById("js-salts");
 
 export const show = (element) => {
   element.classList.remove("none");
@@ -39,9 +43,12 @@ export const setData = (data) => {
 export const setStyle = (data) => {
   const tempValue = Math.round(Number(data["수온"]));
   const saltValue = Math.round(Number(data["염분"]));
+  // 배경 설정
   body.style.backgroundColor = `rgb(${2 * tempValue + 92}, ${
     2 * tempValue + 162
   }, ${tempValue + 226})`;
+
+  // 파도 색 설정
   const r1 = mapNumRange({
     num: tempValue,
     fromMin: range.temp.min,
@@ -86,10 +93,34 @@ export const setStyle = (data) => {
     toMax: range.b2.max,
   });
   wave2.attributes[2].value = `rgb(${r2}, ${g2}, ${b2})`;
+
+  // 소금 추가
+  const saltNum = mapNumRange({
+    num: saltValue,
+    fromMin: range.salt.min,
+    fromMax: range.salt.max,
+    toMin: 10,
+    toMax: 30,
+  });
+
+  for (let i = 0; i < saltNum; i++) {
+    const div = document.createElement("div");
+    div.className = "salt";
+    const size = getRandomInt(5, 15);
+    div.style.width = `${size}px`;
+    div.style.height = `${size}px`;
+    div.style.top = `${getRandomInt(300, windowHeight - 50)}px`;
+    div.style.left = `${getRandomInt(50, windowWidth - 50)}px`;
+    salts.insertAdjacentElement("afterbegin", div);
+  }
 };
 
 const mapNumRange = ({ num, fromMin, fromMax, toMin, toMax }) => {
   return Math.floor(
     ((num - fromMin) / (fromMax - fromMin)) * (toMax - toMin) + toMin
   );
+};
+
+const getRandomInt = (min, max) => {
+  return Math.floor(Math.random() * (max - min)) + min; //최댓값은 제외, 최솟값은 포함
 };

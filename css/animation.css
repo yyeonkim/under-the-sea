@@ -4,6 +4,10 @@
   --wave-scale: 4;
 }
 
+body {
+  transition: background-color 2s;
+}
+
 .wave1,
 .wave2 {
   position: fixed;
@@ -21,10 +25,20 @@
   animation: wave 8s ease-in-out 0s infinite;
 }
 
-body,
 .wave1 path,
 .wave2 path {
   transition: all 2s;
+}
+
+.salt {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: red;
+  position: fixed;
+  top: -10rem;
+  left: -10rem;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 @keyframes wave {
