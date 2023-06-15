@@ -105,13 +105,16 @@ export const setStyle = (data) => {
 
   for (let i = 0; i < saltNum; i++) {
     const div = document.createElement("div");
+    const size = getRandom(5, 12);
+    const duration = getRandom(1, 3);
     div.className = "salt";
-    const size = getRandomInt(5, 15);
     div.style.width = `${size}px`;
     div.style.height = `${size}px`;
-    div.style.top = `${getRandomInt(300, windowHeight - 50)}px`;
-    div.style.left = `${getRandomInt(50, windowWidth - 50)}px`;
+    div.style.top = `${getRandom(300, windowHeight - 50)}px`;
+    div.style.left = `${getRandom(50, windowWidth - 50)}px`;
+    div.style.animation = `float ${duration}s ease-in-out 0s infinite;`;
     salts.insertAdjacentElement("afterbegin", div);
+    salts.style.opacity = 1;
   }
 };
 
@@ -121,6 +124,6 @@ const mapNumRange = ({ num, fromMin, fromMax, toMin, toMax }) => {
   );
 };
 
-const getRandomInt = (min, max) => {
+const getRandom = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min; //최댓값은 제외, 최솟값은 포함
 };
