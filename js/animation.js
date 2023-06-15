@@ -4,7 +4,6 @@ const windowHeight = window.innerHeight;
 // 해양 수치와 파도 색 범위
 const range = {
   temp: { min: 4, max: 13 },
-  quality: { min: 20, max: 64 },
   salt: { min: 28, max: 35 },
   r1: { min: 0, max: 22 },
   r2: { min: 0, max: 115 },
