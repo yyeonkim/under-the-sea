@@ -13,7 +13,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -100;
+  z-index: -10;
   transform: scale(var(--wave-scale), 1) translateX(var(--move));
 }
 
@@ -28,6 +28,11 @@ body {
 .wave1 path,
 .wave2 path {
   transition: all 2s;
+}
+
+.salts,
+.fishes {
+  z-index: -9;
 }
 
 .salts {
@@ -52,41 +57,34 @@ body {
 }
 
 .fish1 {
-  top: 40rem;
-  right: 10rem;
+  right: -50rem;
   transform: scale(0.5);
 }
 
 .fish2 {
-  top: 30rem;
-  left: 20rem;
+  left: -50rem;
 }
 
 .fish2--small {
   transform: scale(0.5);
-  top: 40rem;
-  left: 50rem;
+  left: -50rem;
 }
 
 .fish3--small {
   transform: scale(0.5);
-  top: 40rem;
-  right: 50rem;
+  right: -50rem;
 }
 
 .fish3 {
-  top: 30rem;
-  right: 30rem;
+  right: -50rem;
 }
 
 .fish4 {
-  top: 50rem;
-  left: 10rem;
+  left: -50rem;
 }
 
 .turtle {
-  top: 60rem;
-  left: 10rem;
+  left: -50rem;
 }
 
 @keyframes wave {
@@ -114,5 +112,25 @@ body {
 
   0% {
     transform: translateY(0);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    left: -60rem;
+  }
+
+  100% {
+    left: calc(100vw + 60rem);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    right: -50rem;
+  }
+
+  100% {
+    right: calc(100vw + 50rem);
   }
 }
