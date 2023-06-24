@@ -93,14 +93,14 @@ export const setStyle = (data) => {
     num: saltValue,
     fromMin: range.salt.min,
     fromMax: range.salt.max,
-    toMin: 10,
-    toMax: 30,
+    toMin: 20,
+    toMax: 40,
   });
 
   // saltNum개의 소금 추가
   for (let i = 0; i < saltNum; i++) {
     const div = document.createElement("div");
-    const size = getRandom(5, 12);
+    const size = getRandom(8, 15);
     const duration = getRandom(1, 3);
     div.className = "salt";
     div.style.width = `${size}px`;
