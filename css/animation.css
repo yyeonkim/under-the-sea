@@ -1,6 +1,6 @@
 :root {
-  --wave-width: 1440px;
-  --wave-scale: 4;
+  --wave-move: 1440px;
+  --wave-scale: 6;
 }
 
 body {
@@ -93,7 +93,7 @@ body {
   }
 
   50% {
-    margin-left: var(--wave-width);
+    margin-left: calc(-1 * var(--wave-move));
   }
 }
 
