@@ -1,6 +1,6 @@
 :root {
   --wave-width: 1440px;
-  --move: 360px;
+  --move: 720px;
   --wave-scale: 4;
 }
 
@@ -14,7 +14,7 @@ body {
   top: 0;
   left: 0;
   z-index: -10;
-  transform: scale(var(--wave-scale), 1) translateX(var(--move));
+  transform: scale(var(--wave-scale), 1);
 }
 
 .wave1 {
@@ -88,16 +88,13 @@ body {
 }
 
 @keyframes wave {
-  0% {
-    transform: scale(var(--wave-scale), 1) translateX(var(--move));
+  0%,
+  100% {
+    margin-left: 0;
   }
 
   50% {
-    transform: scale(var(--wave-scale), 1) translateX(calc(-1 * var(--move)));
-  }
-
-  0% {
-    transform: scale(var(--wave-scale), 1) translateX(var(--move));
+    margin-left: var(--wave-width);
   }
 }
 
